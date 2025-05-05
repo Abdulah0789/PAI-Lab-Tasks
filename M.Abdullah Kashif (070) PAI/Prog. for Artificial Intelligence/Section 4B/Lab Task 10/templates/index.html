@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-utensils"></i>Gourmet Restaurant Lahore</h1>
+            <p>Your personal dining assistant</p>
+        </header>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chatbot-info">
+                    <h3>Dining Guide</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your restaurant assistant. I can help you find dining options, check opening hours, and make recommendations. What are you looking for today?</p>
+                    </div>
+                    <div class="message-time">{{ current_time }}</div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        
+        <div class="quick-questions">
+            <p>Quick questions:</p>
+            <button class="quick-btn" data-question="Recommend a restaurant">Recommend a restaurant</button>
+            <button class="quick-btn" data-question="Any Italian places?">Italian places</button>
+            <button class="quick-btn" data-question="What are the opening hours?">Opening hours</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
