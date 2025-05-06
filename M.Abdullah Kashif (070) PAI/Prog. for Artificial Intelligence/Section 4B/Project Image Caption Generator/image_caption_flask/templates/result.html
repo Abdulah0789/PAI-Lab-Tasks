@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caption Result</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+      background-size: cover;
+    }
+
+    h1 {
+      color: #004d40;
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .caption-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 25px 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+
+    .caption-box img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .caption-text {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Caption Generator</h1>
+
+  <div class="caption-box">
+    <img src="{{ image_path }}" alt="Uploaded Image">
+    <p class="caption-text"><strong>Caption:</strong> {{ caption }}</p>
+    <a href="/" class="btn">Upload Another Image</a>
+  </div>
+
+</body>
+</html>
